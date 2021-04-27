@@ -55,7 +55,7 @@ This method simply calculates the average values of three channels in style imag
 We set a filter to get good examples and bad examples. But the result here is not great because some cases opposite to our intuitive feeling.
 Here are some good examples supposed by this method:
 <p align="center">
-  <img src="./pictures/style1.PNG" height="600"/>
+  <img src="./pictures/style1.PNG" height="200" width ="400"/>
 </p>
 
 #### Solution2: Improved average RGB method
