@@ -91,4 +91,18 @@ Here are the good results from this filter
   <img src="./pictures/style5.PNG" height="200" width ="400"/>
 </p>
 
+#### Solution4: Binary image method
+This idea of this method is to convert the style image and stylized image to binary image, then compare the white pixels in these two binary images. Here we use the proportion of white pixels to compute the style loss. Finally we filter out the best image and the worst image.
+Best images:
+<p align="center">
+  <img src="./pictures/style6.png" height="200" width ="400"/>
+</p>
+Worst images:
+<p align="center">
+  <img src="./pictures/style7.png" height="200" width ="400"/>
+</p>
+
+
+
+
 
