@@ -79,10 +79,16 @@ This method makes use of the ranges of RGB channels to evaluate the style loss o
 <p align="center">
   <img src="./pictures/problem3_3.png" height="300"/>
 </p>
+For this method prerformance, it maybe not good that solution2. Here are the bad results from this filter:
 
+<p align="center">
+  <img src="./pictures/style4.PNG" height="200"/>
+</p>
 
+Here are the good results from this filter 
 
-
-
+<p align="center">
+  <img src="./pictures/style5.PNG" height="200"/>
+</p>
 
 
