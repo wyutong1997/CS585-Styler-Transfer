@@ -55,8 +55,9 @@ This method simply calculates the average values of three channels in style imag
 We set a filter to get good examples and bad examples. But the result here is not great because some cases opposite to our intuitive feeling.
 Here are some good examples supposed by this method:
 <p align="center">
-  <img src="./pictures/style1.PNG" height="100"/>
+  <img src="./pictures/style1.PNG" height="200"/>
 </p>
+
 #### Solution2: Improved average RGB method
 This method makes small modification at Average RGB method. Instead of calculating the average of the whole image, it separates the image into 9 parts like a board of Tic Tac Toe and calculates the average values of three channels in 9 parts.
 Therefore, for a style image, we get 9 average values of 3 channels, that is 27 average values in all. Then similar to Average RGB method, we evaluate the performance of the style-transfer model by the difference of average differences of the three channels.
@@ -65,11 +66,11 @@ Therefore, for a style image, we get 9 average values of 3 channels, that is 27 
 </p>
 From the result, we thought it works much better than the simple one because it can filter out the cases that we are not satisfied. Here are the bad results.
 <p align="center">
-  <img src="./pictures/style2.PNG" height="100"/>
+  <img src="./pictures/style2.PNG" height="200"/>
 </p>
 here are some good result
 <p align="center">
-  <img src="./pictures/style3.PNG" height="100"/>
+  <img src="./pictures/style3.PNG" height="200"/>
 </p>
 
 #### Solution3: RGB Range method
