@@ -102,7 +102,7 @@ Worst images:
   <img src="./pictures/style7.png" height="200" width ="400"/>
 </p>
 
-#### Conclution
+#### Conclusion
 Style loss is hard to evaluate because it's related to our tuition. We trie different algorithms to find out which algorithm can filter out good or bad case as we suppose. But we still think these methods will be affected by the color or the brightness of the styles. We found that the pictures in the same group share some features which may affect the result. We also tried combine different algorithms, then it would filter almost all the styles, so it's not suitable for these styles. But we thought it's also an idea to evaluate style loss. For the all solutions above, we thought Improved average RGB method is the best.
 
 
