@@ -66,11 +66,11 @@ Therefore, for a style image, we get 9 average values of 3 channels, that is 27 
 </p>
 From the result, we thought it works much better than the simple one because it can filter out the cases that we are not satisfied. Here are the bad results.
 <p align="center">
-  <img src="./pictures/style2.PNG" height="200" width ="600"/>
+  <img src="./pictures/style2.PNG" height="200" width ="400"/>
 </p>
 here are some good result
 <p align="center">
-  <img src="./pictures/style3.PNG" height="200" width ="600"/>
+  <img src="./pictures/style3.PNG" height="200" width ="400"/>
 </p>
 
 #### Solution3: RGB Range method
@@ -82,13 +82,13 @@ This method makes use of the ranges of RGB channels to evaluate the style loss o
 For this method prerformance, it maybe not good that solution2. Here are the bad results from this filter:
 
 <p align="center">
-  <img src="./pictures/style4.PNG" height="200" width ="600"/>
+  <img src="./pictures/style4.PNG" height="200" width ="400"/>
 </p>
 
 Here are the good results from this filter 
 
 <p align="center">
-  <img src="./pictures/style5.PNG" height="200" width ="600"/>
+  <img src="./pictures/style5.PNG" height="200" width ="400"/>
 </p>
 
 
