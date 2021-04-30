@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import os
-
+import optparse
 
 # calculate the entire average rgb
 def simple_calculate_avg_rgb(img):
@@ -162,33 +162,28 @@ def style_loss3(img,style):
     style_perc=np.sum(style_thresh)/style_thresh.size
     return abs(img_perc/style_perc-1)
 
-##################### testing evaluation ####################
-#image_style = cv2.imread("./style1.jpg")
-#image_transfered = cv2.imread("./stylized-image.jpg")
+if __name__ == "__main__":
+    parser = optparse.OptionParser()
+    parser.add_option('--style', dest='style_file_path', type = 'string', help = 'the path to style image')
+    parser.add_option('--face', dest='face_file_path', type = 'string', help = 'the path to face image')
 
-### the smaller loss, the better. 
-#### average rgb difference to compute style loss, this is simpler than style_loss1
-'''simple_style_loss1_res = simple_style_loss1(image_style, image_transfered)
-print(simple_style_loss1_res)
+    # init parameters
+    (options,args) = parser.parse_args()
 
-###### average rgb difference to compute style loss #########
-style_loss1_res = style_loss1(image_style, image_transfered)
-print(style_loss1_res)
+    style_path = options.style_file_path
+    face_path = options.face_file_path
 
-
-###### calculate the range of three channel and compute style loss #####
-# it return [Blue_loss, Green_loss, Red_loss]
-style_loss2_res = style_loss2(image_style, image_transfered)
-print(style_loss2_res)'''
-result_file=open("result.txt","r+")
-style_g=os.listdir(r"g:\downloads\style")
-img_g=os.listdir(r"g:\downloads\stylized_files")
-for i in range(149):
-    style_tmp=cv2.imread("style\\"+style_g[i])
-    img_tmp=cv2.imread("stylized_files\\"+img_g[i])
-    loss=style_loss3(img_tmp,style_tmp)
-    result_file.write("file {0} loss: {1}\n".format(i,loss))
-result_file.close()
-
-
-
+    style_img = cv2.imread(style_path)
+    face_img = cv2.imread(face_path)
+    simple_loss = simple_style_loss1(style_img, face_img)
+    avg_loss = style_loss1(style_img, face_img)
+    range_loss = style_loss2(style_img, face_img)
+    gray_loss = style_loss3(style_img, face_img)
+    print("Simple Average RGB method")
+    print("style loss: "+str(simple_loss))
+    print("Improved Average RGB method")
+    print("style loss: " +str(avg_loss))
+    print("RGB Range method")
+    print("style loss: " +str(range_loss))
+    print("Binary method")
+    print("style loss: " +str(gray_loss))
