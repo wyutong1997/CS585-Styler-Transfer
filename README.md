@@ -22,7 +22,7 @@ When there is an obvious boundary between the upper and lower colors in the styl
 <p align="center">
   <img src="./pictures/problem1_1.png" height="300"/>
 </p>
-We use the sum of all the pixels on the Y-axis of the stylized image to measure this problem. The following table shows the stylized image curves for normal style images (output stylized images are reasonably well) and special cases (the styles we mentioned above) on 150 different celebritiesâ€™ faces. A stylized image with distinct boundaries will result in a stylized image with very clear steps in the curve shown below. This may be because style transfer not only learns the style of style image, but also leaves the color distribution to the stylized image.
+We use the sum of all the pixels on the Y-axis of the stylized image to measure this problem. The following table shows the stylized image curves for normal style images (output stylized images are reasonably well) and special cases (the styles we mentioned above) on 150 different celebritiesâ€?faces. A stylized image with distinct boundaries will result in a stylized image with very clear steps in the curve shown below. This may be because style transfer not only learns the style of style image, but also leaves the color distribution to the stylized image.
 
 <p align="center">
   <img src="./pictures/problem1_2.png" height="300"/>
@@ -106,7 +106,12 @@ Worst images:
 Style loss is hard to evaluate because it's related to our tuition. We trie different algorithms to find out which algorithm can filter out good or bad case as we suppose. But we still think these methods will be affected by the color or the brightness of the styles. We found that the pictures in the same group share some features which may affect the result. We also tried combine different algorithms, then it would filter almost all the styles, so it's not suitable for these styles. But we thought it's also an idea to evaluate style loss. For the all solutions above, we thought Improved average RGB method is the best.
 
 ## Total Conclusion:
-We used style transfer on 150 pairs of style images and content images. We compared the results and decided to evaluate the results by style loss and content loss. As above, we find that when the style images have some obvious edges, the original image will retain such features after conversion, even though there are no obvious edges in the origin image. Also the direction of these edges are the same as the style image 
+We used style transfer on 150 pairs of style images and content images. We compared the results and decided to evaluate the results by style loss and content loss. As above, we find that when the style images have some obvious edges, the original image will retain such features after conversion, even though there are no obvious edges in the origin image. Also the direction of these edges are the same as the style image.
+
+## How to run the program:
+Run style_transfer.ipynb in COLAB.
+Run style_loss_compute.py like python style_loss_compute.py --style [path of style image] --face [path of stylized face image]
+
 
 
 
